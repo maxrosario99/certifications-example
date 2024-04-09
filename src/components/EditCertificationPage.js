@@ -1,8 +1,8 @@
 import React from 'react'
 
-const EditCertificationPage = (certification, setCertification, showEdit, setShowEdit) => {
+const EditCertificationPage = (certification, setCertsArray, showEdit, setShowEdit) => {
   return (
-    <div id= "edit-certification-page-container">
+    <div id= "edit-certification-page-container" style={{ display: showEdit ? "block" : "none" }}>
         <div id="edit-certification-header">
             Edit Certification
         </div>

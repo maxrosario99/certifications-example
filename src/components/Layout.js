@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Cert from './Cert'
+import EditCertificationPage from './EditCertificationPage';
 
 
 const Layout = () => {
@@ -22,14 +23,24 @@ const Layout = () => {
         }
 
     ])
+    const [showEdit, setShowEdit] = useState(false);
   return (
     <div>Layout
 
         <div id="cert-container">
             {certsArray.map(function(cert, index){
-                return <Cert 
+                return (<Cert 
                 certification={cert}
                 />
+                ,
+                <EditCertificationPage
+                
+                showEdit = {showEdit}
+                setShowEdit = {setShowEdit}
+                certification = {cert}
+                setCertsArray = {setCertsArray}
+                />
+                )
             })}
             
         </div>
