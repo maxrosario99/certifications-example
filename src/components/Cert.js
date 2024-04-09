@@ -1,26 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const Cert = ({certification, showEdit, setShowEdit}) => {
+const Cert = ({ certification, showEdit, setShowEdit }) => {
   return (
-    <><div
-    
-        onClick={() => setShowEdit(!showEdit)}
-    
-    >
-      Edit
-
+    <div>
+      Cert
+      <h1>{certification.title}</h1>
+      <h2>{certification.company}</h2>
+      <h3> {certification.issue}</h3>
+      <button onClick={() => setShowEdit(!showEdit)}>Edit Certification</button>
     </div>
-    
-    <div>Cert
+  );
+};
 
-
-
-        <h1>{certification.title}</h1>
-        <h2>{certification.company}</h2>
-        <h3> {certification.issue}</h3>
-        <button>Edit Certification</button>
-      </div></>
-  )
-}
-
-export default Cert
+export default Cert;
