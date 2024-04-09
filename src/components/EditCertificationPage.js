@@ -1,5 +1,6 @@
 import React from "react";
 
+//
 const EditCertificationPage = ({
   certification,
   setCertsArray,
@@ -17,9 +18,9 @@ const EditCertificationPage = ({
         <label>Title </label>
         <input placeholder={certification.title} type="text" />
         <label>Company</label>
-        <input placeholder={certification.title} type="text" />
+        <input placeholder={certification.company} type="text" />
         <label>Date Issued:</label>
-        <input placeholder={certification.title} type="text" />
+        <input placeholder={certification.issue} type="text" />
       </form>
     </div>
   );
